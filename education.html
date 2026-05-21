@@ -1,0 +1,160 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Образование - Хранилище редкостей</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏛️ Хранилище редкостей</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="collections.html">Коллекции</a>
+            <a href="exhibitions.html">Выставки</a>
+            <a href="mysteries.html">Загадки</a>
+            <a href="education.html" style="color: #89ABE3;">Образование</a>
+            <a href="visitors.html">Посетителям</a>
+            <a href="account.html">Личный кабинет</a>
+        </nav>
+        <div class="icons">
+            <span id="search-icon">🔍 Поиск</span>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>📚 Образовательный центр</h1>
+        <p>Лекции, вебинары и материалы для всех, кто интересуется историей</p>
+    </section>
+
+    <div class="education-container">
+        <!-- ЛЕКЦИИ И ВЕБИНАРЫ -->
+        <div class="education-section">
+            <h2>🎥 Лекции и вебинары</h2>
+            <div class="lectures-grid">
+                <div class="lecture-card">
+                    <div class="lecture-icon">🏺</div>
+                    <h3>Тайны древнего Египта</h3>
+                    <p class="lecture-date">📅 15 марта 2024 | 18:00</p>
+                    <p class="lecture-desc">Лекция о загадках египетских пирамид, мумиях и фараонах.</p>
+                    <div class="lecturer">👨‍🏫 Лектор: Доктор наук А.В. Петровский</div>
+                    <button class="btn-lecture-register" onclick="alert('Вы записаны на лекцию!')">📝 Записаться</button>
+                </div>
+                <div class="lecture-card">
+                    <div class="lecture-icon">🏛️</div>
+                    <h3>Древняя Греция</h3>
+                    <p class="lecture-date">📅 22 марта 2024 | 18:00</p>
+                    <p class="lecture-desc">Мифы, боги и герои древней Эллады.</p>
+                    <div class="lecturer">👨‍🏫 Лектор: Историк С.В. Морозов</div>
+                    <button class="btn-lecture-register" onclick="alert('Вы записаны на лекцию!')">📝 Записаться</button>
+                </div>
+                <div class="lecture-card">
+                    <div class="lecture-icon">🏮</div>
+                    <h3>Культура древнего Китая</h3>
+                    <p class="lecture-date">📅 29 марта 2024 | 18:00</p>
+                    <p class="lecture-desc">Искусство, философия и традиции Поднебесной.</p>
+                    <div class="lecturer">👨‍🏫 Лектор: Искусствовед А.Д. Соловьева</div>
+                    <button class="btn-lecture-register" onclick="alert('Вы записаны на лекцию!')">📝 Записаться</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- МЕТОДИЧЕСКИЕ МАТЕРИАЛЫ -->
+        <div class="education-section">
+            <h2>📖 Методические материалы</h2>
+            <div class="materials-grid">
+                <div class="material-card">
+                    <div class="material-icon">📄</div>
+                    <h3>Рабочая тетрадь по истории</h3>
+                    <p>Для школьников 5-6 классов</p>
+                    <button class="btn-download" onclick="alert('Скачивание началось!')">📥 Скачать PDF</button>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">📊</div>
+                    <h3>Презентация "Древний мир"</h3>
+                    <p>Для учителей истории</p>
+                    <button class="btn-download" onclick="alert('Скачивание началось!')">📥 Скачать PPTX</button>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">📚</div>
+                    <h3>Список литературы</h3>
+                    <p>Для углублённого изучения</p>
+                    <button class="btn-download" onclick="alert('Скачивание началось!')">📥 Скачать PDF</button>
+                </div>
+                <div class="material-card">
+                    <div class="material-icon">🗺️</div>
+                    <h3>Карты древних цивилизаций</h3>
+                    <p>Набор исторических карт</p>
+                    <button class="btn-download" onclick="alert('Скачивание началось!')">📥 Скачать ZIP</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ТЕСТЫ И ВИКТОРИНЫ -->
+        <div class="education-section">
+            <h2>📝 Тесты и викторины</h2>
+            <div class="tests-grid">
+                <div class="test-card">
+                    <div class="test-icon">🏺</div>
+                    <h3>Древний Египет</h3>
+                    <p>10 вопросов • 10 минут</p>
+                    <div class="test-difficulty easy">⭐ Легкий</div>
+                    <button class="btn-test" onclick="startTest('Древний Египет')">Начать тест</button>
+                </div>
+                <div class="test-card">
+                    <div class="test-icon">🏛️</div>
+                    <h3>Древняя Греция</h3>
+                    <p>10 вопросов • 10 минут</p>
+                    <div class="test-difficulty easy">⭐ Легкий</div>
+                    <button class="btn-test" onclick="startTest('Древняя Греция')">Начать тест</button>
+                </div>
+                <div class="test-card">
+                    <div class="test-icon">🏮</div>
+                    <h3>Древний Китай</h3>
+                    <p>10 вопросов • 10 минут</p>
+                    <div class="test-difficulty medium">⭐⭐ Средний</div>
+                    <button class="btn-test" onclick="startTest('Древний Китай')">Начать тест</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ВИДЕОМАТЕРИАЛЫ -->
+        <div class="education-section">
+            <h2>🎬 Видеоматериалы</h2>
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-thumbnail">🎥</div>
+                    <h3>Как строили пирамиды</h3>
+                    <p>Документальный фильм • 25 мин</p>
+                    <button class="btn-watch" onclick="alert('Видео откроется в новом окне')">▶ Смотреть</button>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">🎥</div>
+                    <h3>Искусство древней Японии</h3>
+                    <p>Документальный фильм • 20 мин</p>
+                    <button class="btn-watch" onclick="alert('Видео откроется в новом окне')">▶ Смотреть</button>
+                </div>
+                <div class="video-card">
+                    <div class="video-thumbnail">🎥</div>
+                    <h3>Затерянные города</h3>
+                    <p>Документальный фильм • 35 мин</p>
+                    <button class="btn-watch" onclick="alert('Видео откроется в новом окне')">▶ Смотреть</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Хранилище редкостей.</p>
+        <p>Адрес📍 Москва, ул. Историческая, 77 | номер телефона📞 +7 (000) 123-45-67 | эл.почта✉ samiramust@museum777.ru</p>
+    </footer>
+
+    <script src="index.js"></script>
+    <script>
+        function startTest(testName) {
+            alert(`Тест "${testName}" начнется сейчас!`);
+        }
+    </script>
+</body>
+</html>

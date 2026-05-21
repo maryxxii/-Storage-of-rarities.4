@@ -1,0 +1,125 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выставки - Хранилище редкостей</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏛️ Хранилище редкостей</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="collections.html">Коллекции</a>
+            <a href="exhibitions.html" style="color: #89ABE3;">Выставки</a>
+            <a href="mysteries.html">Загадки</a>
+            <a href="education.html">Образование</a>
+            <a href="visitors.html">Посетителям</a>
+            <a href="account.html">Личный кабинет</a>
+        </nav>
+        <div class="icons">
+            <span id="search-icon">🔍 Поиск</span>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>🎨 Тематические выставки</h1>
+        <p>Виртуальные экспозиции с кураторскими комментариями</p>
+    </section>
+
+    <div class="exhibitions-container">
+        <!-- ВЫСТАВКА 1 -->
+        <div class="exhibition-card">
+            <div class="exhibition-number">01</div>
+            <div class="exhibition-img">
+                <img src="img/выставка.jpg" alt="Сокровища" onerror="this.src='https://via.placeholder.com/500x350/5C4033/F5F0E6?text=Сокровища'">
+            </div>
+            <div class="exhibition-info">
+                <h3>🏺 Сокровища древних цивилизаций</h3>
+                <div class="exhibition-dates">
+                    <span>📅 1 мар - 30 июн 2024</span>
+                    <span>📍 Главный зал</span>
+                </div>
+                <p class="exhibition-desc">Уникальная коллекция артефактов из Египта, Месопотамии и долины Инда.</p>
+                <div class="exhibition-stats">
+                    <div class="stat">🏺 <span class="stat-number">156</span> экспонатов</div>
+                    <div class="stat">👥 <span class="stat-number">12.5K</span> посетителей</div>
+                </div>
+                <div class="curator-block">
+                    <div class="curator-label">Куратор</div>
+                    <div class="curator-name">👨‍🏫 Доктор исторических наук А.В. Петровский</div>
+                </div>
+                <div class="exhibition-buttons">
+                    <button class="btn-excursion" onclick="alert('🎧 Экскурсия начнется!')">🎧 Экскурсия</button>
+                    <button class="btn-lecture" onclick="alert('📖 Лекция откроется')">📖 Лекция</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ВЫСТАВКА 2 -->
+        <div class="exhibition-card">
+            <div class="exhibition-number">02</div>
+            <div class="exhibition-img">
+                <img src="img/оружие эпох.jpg" alt="Оружие" onerror="this.src='https://via.placeholder.com/500x350/89ABE3/5C4033?text=Оружие'">
+            </div>
+            <div class="exhibition-info">
+                <h3>⚔️ Оружие эпох</h3>
+                <div class="exhibition-dates">
+                    <span>📅 15 апр - 30 сен 2024</span>
+                    <span>📍 Восточное крыло</span>
+                </div>
+                <p class="exhibition-desc">От каменного топора до рыцарского меча. Эволюция военного дела.</p>
+                <div class="exhibition-stats">
+                    <div class="stat">⚔️ <span class="stat-number">203</span> экспоната</div>
+                    <div class="stat">👥 <span class="stat-number">8.2K</span> посетителей</div>
+                </div>
+                <div class="curator-block">
+                    <div class="curator-label">Куратор</div>
+                    <div class="curator-name">👨‍🏫 Эксперт по военной истории С.В. Морозов</div>
+                </div>
+                <div class="exhibition-buttons">
+                    <button class="btn-excursion" onclick="alert('🎧 Экскурсия начнется!')">🎧 Экскурсия</button>
+                    <button class="btn-lecture" onclick="alert('📖 Лекция откроется')">📖 Лекция</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ВЫСТАВКА 3 - АЗИАТСКИЕ ВАЗЫ И ИГРУШКИ -->
+        <div class="exhibition-card">
+            <div class="exhibition-number">03</div>
+            <div class="exhibition-img">
+                <img src="img/азиатские вазы.jpg" alt="Азиатские вазы и игрушки" onerror="this.src='https://via.placeholder.com/500x350/D2B48C/5C4033?text=Азиатские+вазы+и+игрушки'">
+            </div>
+            <div class="exhibition-info">
+                <h3>🏮 Азиатские вазы и игрушки</h3>
+                <div class="exhibition-dates">
+                    <span>📅 10 июн - 31 дек 2024</span>
+                    <span>📍 Азиатский зал</span>
+                </div>
+                <p class="exhibition-desc">Уникальная коллекция японских и китайских ваз, керамические фигурки животных, традиционные игрушки и ритуальные предметы из Китая, Японии и Кореи.</p>
+                <div class="exhibition-stats">
+                    <div class="stat">🏺 <span class="stat-number">245</span> экспонатов</div>
+                    <div class="stat">🎎 <span class="stat-number">8</span> стран</div>
+                    <div class="stat">👥 <span class="stat-number">6.3K</span> посетителей</div>
+                </div>
+                <div class="curator-block">
+                    <div class="curator-label">Куратор</div>
+                    <div class="curator-name">👨‍🏫 Искусствовед, специалист по азиатской культуре Соловьева А.Д</div>
+                </div>
+                <div class="exhibition-buttons">
+                    <button class="btn-excursion" onclick="alert('🎧 Экскурсия по выставке Азиатские вазы и игрушки начнется!')">🎧 Экскурсия</button>
+                    <button class="btn-lecture" onclick="alert('📖 Лекция об азиатском искусстве откроется')">📖 Лекция</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Хранилище редкостей.</p>
+        <p>Адрес📍 Москва, ул. Историческая, 77 | номер телефона📞 +7 (000) 123-45-67 | эл.почта✉ samiramust@museum777.ru</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

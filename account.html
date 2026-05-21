@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Хранилище редкостей</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏛️ Хранилище редкостей</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="collections.html">Коллекции</a>
+            <a href="exhibitions.html">Выставки</a>
+            <a href="mysteries.html">Загадки</a>
+            <a href="education.html">Образование</a>
+            <a href="visitors.html">Посетителям</a>
+            <a href="account.html" style="color: #89ABE3;">Личный кабинет</a>
+        </nav>
+        <div class="icons">
+            <span id="search-icon">🔍 Поиск</span>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>👤 Личный кабинет</h1>
+        <p>Управляйте своими посещениями, избранным и экскурсиями</p>
+    </section>
+
+    <div class="visitors-container" style="max-width: 900px; margin: 0 auto;">
+        <!-- Карточка входа -->
+        <div class="visitors-card" id="loginCard">
+            <div class="visitors-icon">🔐</div>
+            <h2>Вход в личный кабинет</h2>
+            <form id="loginForm">
+                <div style="margin-bottom: 15px;">
+                    <input type="email" id="loginEmail" placeholder="Email" required style="width:100%; padding:12px; border:1px solid #D2B48C; border-radius:8px; box-sizing:border-box;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <input type="password" id="loginPassword" placeholder="Пароль" required style="width:100%; padding:12px; border:1px solid #D2B48C; border-radius:8px; box-sizing:border-box;">
+                </div>
+                <button type="submit" style="width:100%; padding:12px; background:#89ABE3; border:none; border-radius:8px; cursor:pointer;">Войти</button>
+            </form>
+            <div id="loginMessage" style="margin-top:15px; text-align:center;"></div>
+            <p style="text-align:center; margin-top:15px; font-size:12px; color:#777;">
+                Тестовый вход: любой email и пароль
+            </p>
+        </div>
+
+        <!-- Содержимое личного кабинета (скрыто до входа) -->
+        <div id="cabinetContent" style="display:none;">
+            <!-- История посещений -->
+            <div class="visitors-card">
+                <div class="visitors-icon">📅</div>
+                <h2>История посещений</h2>
+                <div id="historyList">
+                    <p>📆 15.03.2026 - Обзорная экскурсия</p>
+                    <p>📆 10.03.2026 - Выставка "Сокровища древних цивилизаций"</p>
+                    <p>📆 05.03.2026 - Лекция "Тайны древнего Египта"</p>
+                    <p>📆 28.02.2026 - Виртуальный тур по музею</p>
+                    <p>📆 20.02.2026 - Выставка "Оружие эпох"</p>
+                </div>
+            </div>
+
+            <!-- Избранные экспонаты -->
+            <div class="visitors-card">
+                <div class="visitors-icon">⭐</div>
+                <h2>Избранные экспонаты</h2>
+                <div id="favoritesList">
+                    <div class="favorite-item" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid #D2B48C;">
+                        <span>🏺 Египетское творение</span>
+                        <button class="remove-favorite" data-name="Египетское творение" style="background:#FF6B6B; border:none; padding:4px 12px; border-radius:5px; cursor:pointer; color:white;">Удалить</button>
+                    </div>
+                    <div class="favorite-item" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid #D2B48C;">
+                        <span>⚔️ Топор викингов</span>
+                        <button class="remove-favorite" data-name="Топор викингов" style="background:#FF6B6B; border:none; padding:4px 12px; border-radius:5px; cursor:pointer; color:white;">Удалить</button>
+                    </div>
+                    <div class="favorite-item" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid #D2B48C;">
+                        <span>🗡️ Катана самурая</span>
+                        <button class="remove-favorite" data-name="Катана самурая" style="background:#FF6B6B; border:none; padding:4px 12px; border-radius:5px; cursor:pointer; color:white;">Удалить</button>
+                    </div>
+                    <div class="favorite-item" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0;">
+                        <span>🏺 Греческая ваза</span>
+                        <button class="remove-favorite" data-name="Греческая ваза" style="background:#FF6B6B; border:none; padding:4px 12px; border-radius:5px; cursor:pointer; color:white;">Удалить</button>
+                    </div>
+                </div>
+                <button id="clearFavorites" style="width:100%; margin-top:15px; padding:10px; background:#D2B48C; border:none; border-radius:8px; cursor:pointer;">🗑️ Очистить всё избранное</button>
+            </div>
+
+            <!-- Сохранённые экскурсии -->
+            <div class="visitors-card">
+                <div class="visitors-icon">🎧</div>
+                <h2>Сохранённые экскурсии</h2>
+                <div id="savedTours">
+                    <div class="tour-item" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid #D2B48C;">
+                        <span>🎧 Виртуальный тур по музею</span>
+                        <button class="remove-tour" data-tour="Виртуальный тур" style="background:#FF6B6B; border:none; padding:4px 12px; border-radius:5px; cursor:pointer; color:white;">Удалить</button>
+                    </div>
+                    <div class="tour-item" style="display:flex; justify-content:space-between; align-items:center; padding:8px 0;">
+                        <span>🎧 Аудиогид "Древний Египет"</span>
+                        <button class="remove-tour" data-tour="Аудиогид Древний Египет" style="background:#FF6B6B; border:none; padding:4px 12px; border-radius:5px; cursor:pointer; color:white;">Удалить</button>
+                    </div>
+                </div>
+                <button id="clearTours" style="width:100%; margin-top:15px; padding:10px; background:#D2B48C; border:none; border-radius:8px; cursor:pointer;">🗑️ Очистить все экскурсии</button>
+            </div>
+
+            <!-- Настройки уведомлений -->
+            <div class="visitors-card">
+                <div class="visitors-icon">🔔</div>
+                <h2>Настройки уведомлений</h2>
+                <label style="display:block; margin:10px 0;">
+                    <input type="checkbox" id="notifyEvents"> 📢 Уведомлять о новых выставках
+                </label>
+                <label style="display:block; margin:10px 0;">
+                    <input type="checkbox" id="notifyLectures"> 🎓 Уведомлять о новых лекциях
+                </label>
+                <label style="display:block; margin:10px 0;">
+                    <input type="checkbox" id="notifyPromo"> 💰 Специальные предложения и скидки
+                </label>
+                <button id="saveSettings" style="width:100%; margin-top:15px; padding:10px; background:#89ABE3; border:none; border-radius:8px; cursor:pointer;">💾 Сохранить настройки</button>
+                <div id="settingsMessage" style="margin-top:10px; text-align:center; color:#4CAF50;"></div>
+            </div>
+
+            <!-- Кнопка выхода -->
+            <div class="visitors-card" style="text-align:center;">
+                <button id="logoutBtn" style="width:100%; padding:12px; background:#5C4033; color:white; border:none; border-radius:8px; cursor:pointer;">🚪 Выйти из аккаунта</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Хранилище редкостей.</p>
+        <p>Адрес📍 Москва, ул. Историческая, 77 | номер телефона📞 +7 (000) 123-45-67</p>
+    </footer>
+
+    <script>
+        // Функция для показа уведомлений
+        function showMessage(element, text, isSuccess = true) {
+            element.innerHTML = text;
+            element.style.color = isSuccess ? "#4CAF50" : "#FF6B6B";
+            setTimeout(() => {
+                if (element.innerHTML === text) element.innerHTML = "";
+            }, 3000);
+        }
+
+        // Вход в личный кабинет
+        document.getElementById('loginForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+            const msg = document.getElementById('loginMessage');
+            
+            if (email && password) {
+                // Сохраняем email пользователя
+                localStorage.setItem('userEmail', email);
+                localStorage.setItem('isLoggedIn', 'true');
+                
+                showMessage(msg, `✅ Добро пожаловать, ${email}!`, true);
+                
+                // Скрываем форму входа, показываем кабинет
+                document.getElementById('loginCard').style.display = 'none';
+                document.getElementById('cabinetContent').style.display = 'block';
+                
+                // Загружаем сохранённые настройки
+                loadUserSettings();
+            } else {
+                showMessage(msg, '❌ Заполните email и пароль', false);
+            }
+        });
+
+        // Выход
+        document.getElementById('logoutBtn')?.addEventListener('click', function() {
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            location.reload();
+        });
+
+        // Загрузка настроек пользователя
+        function loadUserSettings() {
+            document.getElementById('notifyEvents').checked = localStorage.getItem('notifyEvents') === 'true';
+            document.getElementById('notifyLectures').checked = localStorage.getItem('notifyLectures') === 'true';
+            document.getElementById('notifyPromo').checked = localStorage.getItem('notifyPromo') === 'true';
+        }
+
+        // Сохранение настроек
+        document.getElementById('saveSettings')?.addEventListener('click', function() {
+            const events = document.getElementById('notifyEvents').checked;
+            const lectures = document.getElementById('notifyLectures').checked;
+            const promo = document.getElementById('notifyPromo').checked;
+            
+            localStorage.setItem('notifyEvents', events);
+            localStorage.setItem('notifyLectures', lectures);
+            localStorage.setItem('notifyPromo', promo);
+            
+            const msg = document.getElementById('settingsMessage');
+            showMessage(msg, '✅ Настройки сохранены!', true);
+        });
+
+        // Удаление из избранного
+        document.querySelectorAll('.remove-favorite').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const item = this.closest('.favorite-item');
+                const name = this.getAttribute('data-name');
+                item.style.opacity = '0.5';
+                setTimeout(() => item.remove(), 300);
+                showMessage(document.createElement('div'), `🗑️ "${name}" удалён из избранного`, true);
+            });
+        });
+
+        // Очистка всего избранного
+        document.getElementById('clearFavorites')?.addEventListener('click', function() {
+            if (confirm('Вы уверены, что хотите очистить всё избранное?')) {
+                const favorites = document.querySelectorAll('.favorite-item');
+                favorites.forEach(item => item.remove());
+                showMessage(document.createElement('div'), '🗑️ Избранное очищено', true);
+            }
+        });
+
+        // Удаление из сохранённых экскурсий
+        document.querySelectorAll('.remove-tour').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const item = this.closest('.tour-item');
+                const tour = this.getAttribute('data-tour');
+                item.style.opacity = '0.5';
+                setTimeout(() => item.remove(), 300);
+                showMessage(document.createElement('div'), `🗑️ "${tour}" удалён`, true);
+            });
+        });
+
+        // Очистка всех экскурсий
+        document.getElementById('clearTours')?.addEventListener('click', function() {
+            if (confirm('Вы уверены, что хотите очистить все сохранённые экскурсии?')) {
+                const tours = document.querySelectorAll('.tour-item');
+                tours.forEach(item => item.remove());
+                showMessage(document.createElement('div'), '🗑️ Экскурсии очищены', true);
+            }
+        });
+
+        // Проверка авторизации при загрузке
+        if (localStorage.getItem('isLoggedIn') === 'true') {
+            document.getElementById('loginCard').style.display = 'none';
+            document.getElementById('cabinetContent').style.display = 'block';
+            loadUserSettings();
+        }
+    </script>
+</body>
+</html>

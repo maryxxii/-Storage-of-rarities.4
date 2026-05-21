@@ -1,0 +1,154 @@
+ <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Загадки истории - Хранилище редкостей</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🏛️ Хранилище редкостей</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="collections.html">Коллекции</a>
+            <a href="exhibitions.html">Выставки</a>
+            <a href="mysteries.html" style="color: #89ABE3;">Загадки</a>
+            <a href="education.html">Образование</a>
+            <a href="visitors.html">Посетителям</a>
+            <a href="account.html">Личный кабинет</a>
+        </nav>
+        <div class="icons">
+            <span id="search-icon">🔍 Поиск</span>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <h1>❓ Загадки истории</h1>
+        <p>Неразгаданные тайны и альтернативные теории происхождения</p>
+    </section>
+
+    <div class="mysteries-container">
+        <!-- ЗАГАДКА 1: Проклятие фараонов -->
+        <div class="mystery-card">
+            <div class="mystery-header">
+                <h2>
+                    <span class="mystery-icon">🔮</span>
+                    Проклятие фараонов
+                </h2>
+            </div>
+            <div class="mystery-content">
+                <div class="mystery-question">
+                    <h3>🤔 В чём загадка?</h3>
+                    <p>После открытия гробницы Тутанхамона в 1922 году несколько участников экспедиции умерли при загадочных обстоятельствах. Это совпадение или магическое проклятие?</p>
+                </div>
+                
+                <div class="theories">
+                    <h4>📖 Альтернативные версии:</h4>
+                    <div class="theory-item">
+                        <div class="theory-title">🔵 Версия 1: Магическое проклятие</div>
+                        <div class="theory-text">Фараоны накладывали проклятия на грабителей гробниц, и они "сработали" спустя тысячелетия.</div>
+                    </div>
+                    <div class="theory-item">
+                        <div class="theory-title">🟢 Версия 2: Древние бактерии</div>
+                        <div class="theory-text">В закрытых гробницах сохранились опасные бактерии и грибки, которые вызвали заболевания у археологов.</div>
+                    </div>
+                    <div class="theory-item">
+                        <div class="theory-title">🟡 Версия 3: Радиоактивное заражение</div>
+                        <div class="theory-text">Некоторые учёные предполагают, что в гробницах использовались радиоактивные материалы.</div>
+                    </div>
+                </div>
+                
+                <div class="expert-opinion">
+                    <h4>🎥 Мнение эксперта</h4>
+                    <p>«Большинство смертей можно объяснить естественными причинами. "Проклятие фараонов" - скорее журналистский миф». — Египтолог М.И. Соколова</p>
+                </div>
+                
+                <div class="discussion-section">
+                    <h4>💬 Обсуждение</h4>
+                    <div class="comment-input">
+                        <input type="text" placeholder="Ваше имя" id="name1">
+                        <input type="text" placeholder="Комментарий" id="comment1">
+                        <button onclick="addComment(1)">Отправить</button>
+                    </div>
+                    <div class="vote-buttons">
+                        <button class="vote-btn" onclick="vote(1, 'Проклятие')">🔮 Проклятие</button>
+                        <button class="vote-btn" onclick="vote(1, 'Бактерии')">🦠 Бактерии</button>
+                        <button class="vote-btn" onclick="vote(1, 'Радиация')">☢️ Радиация</button>
+                    </div>
+                    <div class="comments-list" id="comments1">
+                        <div class="comment">
+                            <div class="comment-user">🔍 Исследователь:</div>
+                            <div>Очень интересная тема! Думаю, всему есть научное объяснение.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ЗАГАДКА 2: Бермудский треугольник -->
+        <div class="mystery-card">
+            <div class="mystery-header">
+                <h2>
+                    <span class="mystery-icon">🌊</span>
+                    Бермудский треугольник
+                </h2>
+            </div>
+            <div class="mystery-content">
+                <div class="mystery-question">
+                    <h3>🤔 В чём загадка?</h3>
+                    <p>В районе Бермудского треугольника пропадают корабли и самолёты. Что происходит в этой аномальной зоне?</p>
+                </div>
+                
+                <div class="theories">
+                    <h4>📖 Альтернативные версии:</h4>
+                    <div class="theory-item">
+                        <div class="theory-title">🔵 Версия 1: Природные явления</div>
+                        <div class="theory-text">Гигантские волны-убийцы, метановые пузыри и магнитные аномалии могут объяснить пропажи.</div>
+                    </div>
+                    <div class="theory-item">
+                        <div class="theory-title">🟢 Версия 2: База пришельцев</div>
+                        <div class="theory-text">Уфологи считают, что под водой находится база инопланетян, которые "похищают" корабли.</div>
+                    </div>
+                    <div class="theory-item">
+                        <div class="theory-title">🟡 Версия 3: Портал в другое измерение</div>
+                        <div class="theory-text">Эзотерики утверждают, что в этом месте открывается портал в параллельные миры.</div>
+                    </div>
+                </div>
+                
+                <div class="expert-opinion">
+                    <h4>🎥 Мнение эксперта</h4>
+                    <p>«В Бермудском треугольнике пропадает не больше кораблей, чем в любом другом оживлённом районе океана». — Океанолог В.П. Кузнецов</p>
+                </div>
+                
+                <div class="discussion-section">
+                    <h4>💬 Обсуждение</h4>
+                    <div class="comment-input">
+                        <input type="text" placeholder="Ваше имя" id="name2">
+                        <input type="text" placeholder="Комментарий" id="comment2">
+                        <button onclick="addComment(2)">Отправить</button>
+                    </div>
+                    <div class="vote-buttons">
+                        <button class="vote-btn" onclick="vote(2, 'Природа')">🌊 Природа</button>
+                        <button class="vote-btn" onclick="vote(2, 'Пришельцы')">👽 Пришельцы</button>
+                        <button class="vote-btn" onclick="vote(2, 'Портал')">🌀 Портал</button>
+                    </div>
+                    <div class="comments-list" id="comments2">
+                        <div class="comment">
+                            <div class="comment-user">✈️ Пилот:</div>
+                            <div>Пролетал над этим районом - ничего необычного не заметил.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Хранилище редкостей.</p>
+        <p>Адрес📍 Москва, ул. Историческая, 77 | номер телефона📞 +7 (000) 123-45-67 | эл.почта✉ samiramust@museum777.ru</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
